@@ -3,12 +3,11 @@
  */
 package net.sf.gilead.core.hibernate.jpa;
 
-import javax.persistence.EntityManagerFactory;
-
 import net.sf.gilead.core.hibernate.HibernateUtil;
 import net.sf.gilead.util.IntrospectionHelper;
+import org.hibernate.jpa.HibernateEntityManagerFactory;
 
-import org.hibernate.ejb.HibernateEntityManagerFactory;
+import javax.persistence.EntityManagerFactory;
 
 /**
  * @author bruno.marchesson
@@ -20,7 +19,7 @@ public class HibernateJpaUtil extends HibernateUtil {
 	 * @param entityManagerFactory
 	 */
 	public void setEntityManagerFactory(Object entityManagerFactory) {
-		if (entityManagerFactory instanceof HibernateEntityManagerFactory == false) {
+		if (!(entityManagerFactory instanceof HibernateEntityManagerFactory)) {
 			// Probably an injected session factory
 			//
 			entityManagerFactory = IntrospectionHelper.searchMember(HibernateEntityManagerFactory.class, entityManagerFactory);

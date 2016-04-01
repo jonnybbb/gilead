@@ -7,15 +7,10 @@
 	<parent>
 		<groupId>net.sf.gilead</groupId>
 		<artifactId>gilead</artifactId>
-		<version>2.0.1-SNAPSHOT</version>
+		<version>2.1.0</version>
 	</parent>
 
 	<dependencies>
-		<dependency>
-			<groupId>${project.parent.groupId}</groupId>
-			<artifactId>gilead-core</artifactId>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>net.sf.beanlib</groupId>
 			<artifactId>beanlib-hibernate</artifactId>
@@ -33,14 +28,22 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.gilead</groupId>
+			<artifactId>gilead-core</artifactId>
 		</dependency>
 		<!--<dependency>-->
 			<!--<groupId>org.jboss.as</groupId>-->
